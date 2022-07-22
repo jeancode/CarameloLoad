@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caramelo Load</title>
+    <style>
+
+        body{
+            margin: 0px;
+        }
+        #contenido{
+            width: 100%;
+            height: 100%;
+            background: rgb(187, 189, 196);;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #loadCaramelContent{
+            width: 500px;
+            height: 70px;
+            border-radius: 40px;
+            position:relative;
+            overflow: hidden;
+            box-shadow: 0px 0px 10px rgb(138, 138, 138);;
+        }
+        #loadCaramelLineas{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: 100px 100%;
+            background-image: linear-gradient(120deg,transparent,transparent 40%,rgba(255, 255, 255, 1.017) 40%,rgba(255, 255, 255,1) 60%,transparent 60%);
+            background-position: 0px 0px;
+            z-index: 3;
+            animation: loadCaramelo 0.8s linear infinite;
+        }
+        #loadCaramelColor{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,rgba(255, 6, 135, 0.746),rgba(19, 248, 251, 0.592));;
+            position: absolute;
+            z-index: 2;
+        }
+        #colorDegrade{
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,rgba(255, 6, 135, 0.606),rgba(19, 247, 251, 0.258));;
+            position: absolute;
+            z-index: 5;
+        }
+        #Subtitle{
+            font-size:30px;
+            background:linear-gradient(45deg,rgb(15, 238, 250),rgb(232, 2, 113));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: sans-serif;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.024);
+            margin-bottom: 100px;
+            -webkit-user-select: none;
+        }
+        @keyframes loadCaramelo{
+            0%{
+                background-position: -100px 0px;
+            }
+            100%{
+                background-position: 0px 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="contenido">
+
+        <div id="Subtitle">
+            <h1>Caramelo Load</h1>
+        </div>
+        
+        <div id="loadCaramelContent">
+            
+            
+
+            <div id="loadCaramelLineas"></div>
+            
+            <div id="loadCaramelColor"></div>
+
+            <div id="colorDegrade"></div>
+
+            
+        </div>
+
+    </div>
+</body>
+</html>
